@@ -1,0 +1,26 @@
+.cart-view
+	&-col
+		text-align: center
+		margin: 0px 15px
+		h2
+			margin: 30px 10px
+			position: relative
+			&:hover
+				cursor: pointer
+				text-decoration: underline
+			&:after
+				content: " ";
+				position: absolute
+				height: 50px
+				z-index: 2
+				border: 2px solid
+				left: calc(50% - 2px)
+			&.h2-up
+				&:after
+					bottom: -60px
+			&.h2-down
+				&:after
+					top: -60px
+		img
+			max-height: 500px
+			max-width: 100%

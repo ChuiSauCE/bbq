@@ -1,0 +1,126 @@
+.slider
+	position: relative
+	color: $white
+	overflow: hidden
+	&-backgrounds
+		&-item
+			background-image: url('../img/slide/img-1.jpg')
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			transition: 1000ms ease-in-out
+			background-size: cover
+			background-position: center center
+	&-wrapper
+		width: 1200px
+		margin: 0 auto
+		position: relative
+		display: flex
+		align-items: center
+		height: 660px
+		&-buttonLeft, &-buttonRight
+			position: absolute
+			width: 80px
+			height: 80px
+			display: flex
+			align-items: center
+			font-size: 64px
+			padding: 0 5px
+			&:before
+				content: ''
+				border: 1px solid
+				position: absolute
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				transform: rotate(45deg)
+		&-buttonRight
+			right: 20px
+			justify-content: flex-end
+		&-buttonLeft
+			left: 20px
+		&-contents
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			&-item
+				display: flex
+				flex-direction: column
+				height: 100%
+				width: 100%
+				text-align: center
+				padding-bottom: 100px
+				align-items: center
+				justify-content: flex-end
+				position: absolute
+				h1
+					display: block
+					font-size: 60px
+					margin-bottom: 25px
+				p
+					display: block
+					font-size: 30px
+					margin-bottom: 75px
+				div
+					position: relative
+					width: 100px
+					height: 100px
+					display: flex
+					flex-wrap: wrap
+					align-content: center
+					padding-top: 10px
+					&:before
+						content: ''
+						border: 1px solid
+						position: absolute
+						width: 100%
+						height: 100%
+						top: 0
+						left: 0
+						transform: rotate(45deg)
+					span
+						width: 100%
+						text-align: center
+						i
+							font-size: 32px
+				&.left-out
+					animation: left-out 1000ms ease-in-out forwards
+				&.right-out
+					animation: right-out 1000ms ease-in-out forwards
+				&.left-in
+					animation: left-in 1000ms ease-in-out forwards
+				&.right-in
+					animation: right-in 1000ms ease-in-out forwards
+@keyframes left-out
+	0%
+		transform: translateX(0)
+		opacity: 1
+	100%
+		transform: translateX(-100px)
+		opacity: 0
+@keyframes right-out
+	0%
+		transform: translateX(0)
+		opacity: 1
+	100%
+		transform: translateX(100px)
+		opacity: 0
+@keyframes left-in
+	0%
+		transform: translateX(100px)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+@keyframes right-in
+	0%
+		transform: translateX(-100px)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
